@@ -20,10 +20,10 @@ export default function Home({ news }) {
       
       <div className={styles.grid}>
           {news.data.map((noticia) => (
-            <a href={noticia.link} className={styles.card}>
+            <a key={noticia.hash} href={noticia.link} className={styles.card}>
             <h2 className={styles.titulo}>{noticia.title} &rarr;</h2>
             <p className={styles.fonte}>Fonte: <span>{noticia.source}</span></p>
-          </a>
+            </a>
           ))} 
         </div>
     </div>
